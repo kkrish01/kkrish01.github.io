@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Krishna Kumar</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -200,9 +200,11 @@
 			background-position: center;
 
 		}
+        .bg-container a{
+            margin-top: -7px;
+        }
 		.github{
 			font-size: 19px;
-			margin-top: 0px;
 		}
 		.bg-container-2{
 			margin-left: 10px;
@@ -718,6 +720,9 @@
 	 		.name-area{
 	 			width: 38%;
 	 		}
+            .home-right,.about-left{
+                background-size: 200%;
+            }
 	 	}
 	 	@media screen and (min-width: 400px) and (max-width: 560px){
 	 		.project-container{
@@ -824,6 +829,9 @@
 	 			width: auto;
 	 			height: 100%;
 	 		}
+             .home-right,.about-left{
+                background-size: 200%;
+            }
 	 	}
 	 	@media screen and (min-width: 0px) and (max-width: 400px){
 	 		.project-container{
@@ -998,6 +1006,9 @@
 				font-size: 0.9rem;
 				width: 140px;
 			}
+            .home-right,.about-left{
+                background-size: 200%;
+            }
 	 	}
 	 	.profile-pic{
 	 		height: 300px;
@@ -1073,10 +1084,14 @@
 
 			<div class="a-5 d-f a-i-c">
 				<div class="bg-container d-f a-i-c j-c-c c-p">
-					<i class="bi bi-github c-w github"></i>
+                    <a href="https://github.com/kkrish01">
+                        <i class="bi bi-github c-w github"></i>
+                    </a>
 				</div>
 				<div class="bg-container bg-container-2 d-f a-i-c j-c-c c-p">
-					<i class="bi bi-linkedin c-w github "></i>
+                    <a href="https://www.linkedin.com/in/krishna-kumar-43066226b">
+					    <i class="bi bi-linkedin c-w github "></i>
+                    </a>
 				</div>
 			</div>
 		</div>
@@ -1250,12 +1265,16 @@
 	<!-- Footer -->
 	<div class="footer d-f a-i-c j-c-c">
 		<div class="a-5 d-f a-i-c">
-			<div class="bg-container d-f a-i-c j-c-c c-p" >
-				<i class="bi bi-github c-w github"></i>
-			</div>
-			<div class="bg-container bg-container-2 d-f a-i-c j-c-c c-p" >
-				<i class="bi bi-linkedin c-w github"></i>
-			</div>
+			<div class="bg-container d-f a-i-c j-c-c c-p">
+                <a href="https://github.com/kkrish01">
+                    <i class="bi bi-github c-w github"></i>
+                </a>
+            </div>
+            <div class="bg-container bg-container-2 d-f a-i-c j-c-c c-p">
+                <a href="https://www.linkedin.com/in/krishna-kumar-43066226b">
+                    <i class="bi bi-linkedin c-w github "></i>
+                </a>
+            </div>
 		</div>
 	</div>
 
