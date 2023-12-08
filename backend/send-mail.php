@@ -5,7 +5,8 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 if (isset($_GET['mail'])) { // Check if the form was submitted
-
+	echo "Hi";
+			   return;
     $name = $_POST['name'];
     $number = $_POST['number'];
     $email = $_POST['email'];
