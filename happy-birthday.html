@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beautiful Custom Video Player</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 10px;
+    }
+
+    .video-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-height: 95vh;
+      width: 100%;
+      max-width: 480px;
+      background: #0d1117;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      overflow: hidden;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      max-height: 70vh;
+      object-fit: contain;
+      border-bottom: 2px solid #333;
+      background-color: #000;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px;
+      background: #161b22;
+      width: 100%;
+    }
+
+    .controls button, .controls a {
+      background: linear-gradient(145deg, #00c6ff, #0072ff);
+      border: none;
+      padding: 10px 18px;
+      border-radius: 10px;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .controls button:hover, .controls a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    @media (max-width: 576px) {
+      video {
+        max-height: 60vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="video-wrapper">
+    <!-- poster="poster.jpg"  -->
+    <video id="videoPlayer" src="first.mp4" preload="metadata"></video>
+    <div class="controls">
+      <button onclick="playPause()">▶️ Play / ⏸ Pause</button>
+      <button onclick="muteUnmute()">🔇 Mute / 🔊 Unmute</button>
+      <button onclick="restartVideo()">⏮ Restart</button>
+      <a href="first.mp4" download>⬇️ Download</a>
+    </div>
+  </div>
+
+  <script>
+    const video = document.getElementById('videoPlayer');
+
+    function playPause() {
+      video.paused ? video.play() : video.pause();
+    }
+
+    function muteUnmute() {
+      video.muted = !video.muted;
+    }
+
+    function restartVideo() {
+      video.currentTime = 0;
+      video.play();
+    }
+  </script>
+</body>
+
+</html>
